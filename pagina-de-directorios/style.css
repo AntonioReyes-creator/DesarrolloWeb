@@ -1,9 +1,14 @@
-body {
+  
+  * {
+    box-sizing: border-box;
+  }
+  body {
     font-family: Cambria, sans-serif;
     color: #0D607F;
     background: linear-gradient(rgba(18, 23, 36, 0.75), rgba(5, 7, 12, 0.75)),
-                url("https://uguil.com/wp-content/uploads/2021/09/Nosotros2.jpg") center fixed;
+                url("https://uguil.com/wp-content/uploads/2021/09/Nosotros2.jpg") center;
     background-size: cover;
+    background-repeat: no-repeat;/*linea agragada*/
     margin: 0;
     padding: 0;
   }
@@ -14,21 +19,52 @@ body {
   }
   
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .employee-card {
-    width: 200px;
-    text-align: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border: solid 2px #0B5875;
+}
+
+
+
+.photo-employee {
+  flex: 1;
+  background-color: #e6f0fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+.photo-employee img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+
+.detail-employee {
+  flex: 2;
+  padding: 10px;
+}
+
+
+  /* cambio realizado solo .employee-card*/ 
+.employee-card {
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: 300px;
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 10px;
+}
 
   .employee-card img {
     width: 100px;
@@ -38,6 +74,7 @@ body {
   }
   
   .employee-card h3 {
+    text-align: left;
     margin: 10px 0 5px;
     font-size: 18px;
     color: #0B5875;
@@ -61,7 +98,7 @@ body {
     border: 1px solid #ccc;
   }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .employee-card {
       width: 150px;
     }
@@ -70,6 +107,18 @@ body {
   @media (max-width: 480px) {
     .employee-card {
       width: 120px;
+    } */
+    @media (max-width: 768px) {
+      .employee-card {
+        flex: 1 1 calc(50% - 40px);
+      }
     }
+    
+    /* Móvil: 1 card por fila */
+    @media (max-width: 480px) {
+      .employee-card {
+        flex: 1 1 100%;
+      }
+
   }
   

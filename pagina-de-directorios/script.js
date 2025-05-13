@@ -1,404 +1,53 @@
-const employees = [
-  {
-    name: "Angela Lee",
-    area: "Gerencia",
-    anexo: "118",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/women/1.jpg",
-  },
-
-  {
-    name: "Patricia Paredes",
-    area: "Finanzas",
-    anexo: "122",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/women/2.jpg",
-  },
-  {
-    name: "Roxana Enriquez",
-    area: "Finanzas",
-    anexo: "",
-    phone: "956 495 553",
-    img: "https://randomuser.me/api/portraits/women/3.jpg",
-  },
-  {
-    name: "Jose Santamaria",
-    area: "Finanzas",
-    anexo: "111",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/men/1.jpg",
-  },
-  {
-    name: "Lucy Surichaqui",
-    area: "Finanzas",
-    anexo: "112",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    name: "Emily Zapata",
-    area: "Finanzas",
-    anexo: "",
-    phone: "954 854 197",
-    img: "https://randomuser.me/api/portraits/women/5.jpg",
-  },
-  {
-    name: "Andres Luque",
-    area: "Finanzas",
-    anexo: "133",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/men/2.jpg",
-  },
-  {
-    name: "Walter Burga",
-    area: "Finanzas",
-    anexo: "148",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/men/3.jpg",
-  },
-
-  {
-    name: "Marco Chavez",
-    area: "Proyectos",
-    anexo: "",
-    phone: "990 995 004",
-    img: "https://randomuser.me/api/portraits/men/4.jpg",
-  },
-  {
-    name: "Maricruz Farroñay",
-    area: "Proyectos",
-    anexo: "147",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    name: "Proyectos",
-    area: "Proyectos",
-    anexo: "152",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/lego/1.jpg",
-  },
-
-  {
-    name: "Fiorella Cosi",
-    area: "Legal",
-    anexo: "153",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/women/7.jpg",
-  },
-  {
-    name: "Juan Mallma",
-    area: "Legal",
-    anexo: "132",
-    phone: "943 604 893",
-    img: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-
-  {
-    name: "Rosa Palomino",
-    area: "Comercial",
-    anexo: "108",
-    phone: "945 787 866",
-    img: "https://randomuser.me/api/portraits/women/8.jpg",
-  },
-  {
-    name: "Juan Jose Ñaupari",
-    area: "Comercial",
-    anexo: "110",
-    phone: "996 358 000",
-    img: "https://randomuser.me/api/portraits/men/6.jpg",
-  },
-  {
-    name: "Judhit Leyton",
-    area: "Comercial",
-    anexo: "104",
-    phone: "996 359 000",
-    img: "https://randomuser.me/api/portraits/women/9.jpg",
-  },
-  {
-    name: "Elena Alvarez",
-    area: "Comercial",
-    anexo: "126",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/women/10.jpg",
-  },
-  {
-    name: "Diana Moya",
-    area: "Comercial",
-    anexo: "127",
-    phone: "939 750 721",
-    img: "https://randomuser.me/api/portraits/women/11.jpg",
-  },
-  {
-    name: "Yurico Matos",
-    area: "Comercial",
-    anexo: "136",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/men/7.jpg",
-  },
-
-  {
-    name: "Sergio Firpo",
-    area: "Ventas",
-    anexo: "105",
-    phone: "939 982 983",
-    img: "https://randomuser.me/api/portraits/men/8.jpg",
-  },
-  {
-    name: "Erick Zorrilla",
-    area: "Ventas",
-    anexo: "120",
-    phone: "944 679 214",
-    img: "https://randomuser.me/api/portraits/men/9.jpg",
-  },
-  {
-    name: "Exar Valenzuela",
-    area: "Ventas",
-    anexo: "125",
-    phone: "996 337 176",
-    img: "https://randomuser.me/api/portraits/men/10.jpg",
-  },
-  {
-    name: "Johnny Benites",
-    area: "Ventas",
-    anexo: "134",
-    phone: "962 927 959",
-    img: "https://randomuser.me/api/portraits/men/11.jpg",
-  },
-  {
-    name: "Roberto Rodriguez",
-    area: "Ventas",
-    anexo: "146",
-    phone: "978 508 898",
-    img: "https://randomuser.me/api/portraits/men/12.jpg",
-  },
-  {
-    name: "Darryn Acosta",
-    area: "Ventas",
-    anexo: "116",
-    phone: "964 926 393",
-    img: "https://randomuser.me/api/portraits/men/13.jpg",
-  },
-
-  {
-    name: "Luis Ballez",
-    area: "Post Venta",
-    anexo: "115",
-    phone: "999 997 341",
-    img: "https://randomuser.me/api/portraits/men/14.jpg",
-  },
-  {
-    name: "Jimmy Palomino",
-    area: "Post Venta",
-    anexo: "130",
-    phone: "962 045 791",
-    img: "https://randomuser.me/api/portraits/men/15.jpg",
-  },
-
-  {
-    name: "Juan Ventura",
-    area: "Marketing",
-    anexo: "149",
-    phone: "947 631 436",
-    img: "https://randomuser.me/api/portraits/men/16.jpg",
-  },
-
-  {
-    name: "Eduardo Mendoza",
-    area: "Mantenimiento",
-    anexo: "121",
-    phone: "995 733 808",
-    img: "https://randomuser.me/api/portraits/men/17.jpg",
-  },
-  {
-    name: "Edward Sucacahua",
-    area: "Mantenimiento",
-    anexo: "106",
-    phone: "945 563 286",
-    img: "https://randomuser.me/api/portraits/men/18.jpg",
-  },
-  {
-    name: "Miguel Alvino",
-    area: "Mantenimiento",
-    anexo: "113",
-    phone: "945 737 335",
-    img: "https://randomuser.me/api/portraits/men/19.jpg",
-  },
-  {
-    name: "Diego Maticorena",
-    area: "Mantenimiento",
-    anexo: "150",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/men/20.jpg",
-  },
-
-  {
-    name: "Javier Perez",
-    area: "Logistica",
-    anexo: "139",
-    phone: "964 849 039",
-    img: "https://randomuser.me/api/portraits/men/21.jpg",
-  },
-  {
-    name: "Jefferson Aguirre",
-    area: "Logistica",
-    anexo: "137",
-    phone: "998 805 525",
-    img: "https://randomuser.me/api/portraits/men/22.jpg",
-  },
-  {
-    name: "Sevigne Valdez",
-    area: "Logistica",
-    anexo: "142",
-    phone: "964 849 039",
-    img: "https://randomuser.me/api/portraits/men/23.jpg",
-  },
-  {
-    name: "Lilibeth Peña",
-    area: "Logistica",
-    anexo: "129",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/women/12.jpg",
-  },
-
-  {
-    name: "Wilmer Ccente",
-    area: "Almacen",
-    anexo: "114",
-    phone: "956 991 685",
-    img: "https://randomuser.me/api/portraits/men/24.jpg",
-  },
-  {
-    name: "Pedro Buillón",
-    area: "Almacen",
-    anexo: "128",
-    phone: "956 991 776",
-    img: "https://randomuser.me/api/portraits/men/25.jpg",
-  },
-
-  {
-    name: "Erick Nuñez",
-    area: "Flota",
-    anexo: "145",
-    phone: "990 340 995",
-    img: "https://randomuser.me/api/portraits/men/26.jpg",
-  },
-
-  {
-    name: "Giannina Trinidad",
-    area: "Recursos Humanos",
-    anexo: "124",
-    phone: "941 813 430",
-    img: "https://randomuser.me/api/portraits/women/13.jpg",
-  },
-  {
-    name: "Basilio Salas",
-    area: "Recursos Humanos",
-    anexo: "103",
-    phone: "978 185 774",
-    img: "https://randomuser.me/api/portraits/men/27.jpg",
-  },
-  {
-    name: "Angelo Rivasplata",
-    area: "Recursos Humanos",
-    anexo: "144",
-    phone: "971 434 418",
-    img: "https://randomuser.me/api/portraits/men/28.jpg",
-  },
-  {
-    name: "Sthefany Pariona",
-    area: "Recursos Humanos",
-    anexo: "131",
-    phone: "962 473 449",
-    img: "https://randomuser.me/api/portraits/women/14.jpg",
-  },
-  {
-    name: "Thalia Baldeon",
-    area: "Recursos Humanos",
-    anexo: "140",
-    phone: "977 279 841",
-    img: "https://randomuser.me/api/portraits/women/15.jpg",
-  },
-
-  {
-    name: "Shirley Rivas",
-    area: "Seguridad",
-    anexo: "138",
-    phone: "969 047 510",
-    img: "https://randomuser.me/api/portraits/women/16.jpg",
-  },
-  {
-    name: "Greisy Alania",
-    area: "Seguridad",
-    anexo: "143",
-    phone: "965 070 314",
-    img: "https://randomuser.me/api/portraits/women/17.jpg",
-  },
-  {
-    name: "Christian Tavara",
-    area: "Seguridad",
-    anexo: "151",
-    phone: "941 813 888",
-    img: "https://randomuser.me/api/portraits/men/29.jpg",
-  },
-
-  {
-    name: "Ana Rojas",
-    area: "Salud Ocupacional",
-    anexo: "117",
-    phone: "947 871 483",
-    img: "https://randomuser.me/api/portraits/women/18.jpg",
-  },
-
-  {
-    name: "Kevin Mendoza",
-    area: "TI",
-    anexo: "141",
-    phone: "947 501 118",
-    img: "https://randomuser.me/api/portraits/men/30.jpg",
-  },
-  {
-    name: "Frank Chavez",
-    area: "TI",
-    anexo: "135",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/men/31.jpg",
-  },
-
-  {
-    name: "Vigilancia",
-    area: "Vigilancia",
-    anexo: "109",
-    phone: "",
-    img: "https://randomuser.me/api/portraits/lego/2.jpg",
-  },
-];
+async function loadEmployees() {
+  const response = await fetch("empleados.json");
+  const data = await response.json();
+  displayEmployees(data.empleados);
+}
 
 function displayEmployees(filteredEmployees) {
   const container = document.getElementById("employeeList");
   container.innerHTML = "";
-  filteredEmployees.forEach((emp) => {
-    const card = document.createElement("div");
-    card.classList.add("employee-card");
-    card.innerHTML = `
-        <img src="${emp.img}" alt="${emp.name}">
-        <h3>${emp.name}</h3>
-        <p><strong>Área:</strong> ${emp.area}</p>
-        <p><strong>Tel.:</strong> ${emp.phone}</p>
-        <p><strong>Anexo.:</strong> ${emp.anexo}</p>
-      `;
-    container.appendChild(card);
-  });
+filteredEmployees.forEach((emp) => {
+  const card = document.createElement("div");
+  const photo = document.createElement("div");
+  const detail = document.createElement("div");
+
+  card.classList.add("employee-card");
+  photo.classList.add("photo-employee");
+  detail.classList.add("detail-employee");
+
+  photo.innerHTML = `
+    <img src="${emp.img || 'default.jpg'}" alt="${emp.nombre}">
+  `;
+
+  detail.innerHTML = `
+    <h3>${emp.name}</h3>
+    <p><strong>Puesto:</strong> ${emp.area}</p>
+    <p><strong>Anexo:</strong> ${emp.anexo}</p>
+    <p><strong>Phone:</strong> ${emp.phone}</p>
+  `;
+
+  card.appendChild(photo);
+  card.appendChild(detail);
+  container.appendChild(card);
+});
+
+
 }
 
-function filterEmployees() {
+async function filterEmployees() {
   const selectedArea = document.getElementById("areaFilter").value;
+  const response = await fetch("empleados.json");
+  const data = await response.json();
+
   const filtered = selectedArea
-    ? employees.filter((emp) => emp.area === selectedArea)
-    : employees;
+    ? data.empleados.filter((emp) => emp.area === selectedArea)
+    : data.empleados;
+
   displayEmployees(filtered);
 }
 
+
 window.onload = () => {
-  displayEmployees(employees);
+  loadEmployees();
 };
